@@ -1,16 +1,23 @@
 {
   "name": "sistema-frota",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.1",
+  "description": "Um sistema de gerenciamento de frota implementando conceitos de POO com TypeScript e Bun.",
+  "main": "app.ts",
+  "type": "module",
   "scripts": {
+    "start": "bun run app.ts",
+    "dev": "bun --watch app.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "typescript",
+    "bun",
+    "poo",
+    "gerenciamento-frota"
+  ],
+  "author": "Matheus Pereira",
+  "license": "MIT",
   "devDependencies": {
-    "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   }
 }

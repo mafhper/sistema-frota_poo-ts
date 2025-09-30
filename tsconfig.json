@@ -1,45 +1,43 @@
 {
-  // Visit https://aka.ms/tsconfig to read more about this file
   "compilerOptions": {
-    // File Layout
-    // "rootDir": "./src",
-    // "outDir": "./dist",
+    // Layout do Arquivo
+    // "rootDir": "./src", // Especifica o diretório raiz dos arquivos de entrada.
+    // "outDir": "./dist", // Especifica o diretório de saída para os arquivos compilados.
 
-    // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "target": "esnext",
-    "types": [],
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // and npm install -D @types/node
+    // Configurações de Ambiente
+    "module": "commonjs", // Especifica o sistema de módulo para o código gerado.
+    "esModuleInterop": true, // Permite a interoperabilidade entre módulos CommonJS e ES.
+    "target": "esnext", // Especifica a versão do ECMAScript para a qual o código será compilado.
+    "types": [], // Lista de pacotes de declaração de tipo a serem incluídos.
+    // Para nodejs:
+    // "lib": ["esnext"], // Lista de bibliotecas de declaração de tipo a serem incluídas no ambiente de compilação.
+    // "types": ["node"], // Inclui tipos de pacotes específicos, como 'node'.
+    // e npm install -D @types/node
 
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    // Outras Saídas
+    "sourceMap": true, // Gera arquivos .map para depuração.
+    "declaration": true, // Gera arquivos .d.ts para módulos TypeScript.
+    "declarationMap": true, // Gera arquivos .map para os arquivos .d.ts.
 
-    // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
+    // Opções de Verificação de Tipo Mais Rigorosas
+    "noUncheckedIndexedAccess": true, // Emite um erro para acesso a índices não verificados.
+    "exactOptionalPropertyTypes": true, // Garante que propriedades opcionais sejam estritamente 'undefined' se não fornecidas.
 
-    // Style Options
-    // "noImplicitReturns": true,
-    // "noImplicitOverride": true,
-    // "noUnusedLocals": true,
-    // "noUnusedParameters": true,
-    // "noFallthroughCasesInSwitch": true,
-    // "noPropertyAccessFromIndexSignature": true,
+    // Opções de Estilo
+    // "noImplicitReturns": true, // Emite um erro se nem todos os caminhos de código em uma função retornarem um valor.
+    // "noImplicitOverride": true, // Emite um erro quando um método de subclasse sobrescreve um método de classe base sem usar 'override'.
+    // "noUnusedLocals": true, // Emite um erro para variáveis locais não utilizadas.
+    // "noUnusedParameters": true, // Emite um erro para parâmetros de função não utilizados.
+    // "noFallthroughCasesInSwitch": true, // Emite um erro para casos de switch sem 'break'.
+    // "noPropertyAccessFromIndexSignature": true, // Emite um erro quando uma propriedade é acessada usando notação de ponto, mas é definida por uma assinatura de índice.
 
-    // Recommended Options
-    "strict": true,
-    "jsx": "react-jsx",
+    // Opções Recomendadas
+    "strict": true, // Habilita todas as opções de verificação de tipo estritas.
+    "jsx": "react-jsx", // Suporte JSX para React.
 
-    "isolatedModules": true,
-    "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
+    "isolatedModules": true, // Garante que cada arquivo possa ser compilado de forma independente.
+    "noUncheckedSideEffectImports": true, // Emite um erro para importações que podem ter efeitos colaterais não verificados.
+    "moduleDetection": "force", // Força o TypeScript a tratar todos os arquivos como módulos.
+    "skipLibCheck": true // Pula a verificação de tipo de todos os arquivos de declaração (.d.ts).
   }
 }

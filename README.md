@@ -21,35 +21,18 @@ Este projeto é uma aplicação de console desenvolvida em TypeScript que simula
 
 O código-fonte é organizado de forma modular para separar as responsabilidades:
 
-sistema-frota/
-
-├── src/
-
-│   ├── models/
-
-│   │   ├── Veiculo.ts      \# Classe base abstrata para todos os veículos
-
-│   │   ├── Carro.ts        \# Classe que representa um Carro
-
-│   │   ├── Caminhao.ts     \# Classe que representa um Caminhão
-
-│   │   └── Motorista.ts    \# Classe que representa um Motorista
-
-│   │
-
-│   └── services/
-
-│       └── GerenciadorFrota.ts \# Classe que centraliza a lógica do sistema
-
-│
-
-├── app.ts                  \# Ponto de entrada da aplicação para testes
-
-├── .gitignore              \# Arquivo para ignorar arquivos e pastas (ex: node\_modules)
-
-├── package.json            \# Definições do projeto e dependências
-
-└── tsconfig.json           \# Configurações do compilador TypeScript
+*   `app.ts`: Ponto de entrada da aplicação para testes.
+*   `.gitignore`: Arquivo para ignorar arquivos e pastas (ex: `node_modules`).
+*   `package.json`: Definições do projeto e dependências.
+*   `tsconfig.json`: Configurações do compilador TypeScript.
+*   `src/`
+    *   `models/`
+        *   `Veiculo.ts`: Classe base abstrata para todos os veículos.
+        *   `Carro.ts`: Classe que representa um Carro.
+        *   `Caminhao.ts`: Classe que representa um Caminhão.
+        *   `Motorista.ts`: Classe que representa um Motorista.
+    *   `services/`
+        *   `GerenciadorFrota.ts`: Classe que centraliza a lógica do sistema.
 
 ---
 

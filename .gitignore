@@ -6,6 +6,7 @@ bun.lockb
 # Saída de build
 /dist
 /build
+/docs
 
 # Arquivos de log
 npm-debug.log*

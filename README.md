@@ -17,7 +17,29 @@ Este projeto é uma aplicação de console desenvolvida em TypeScript que simula
 
 ---
 
-## 2\. Estrutura do Projeto
+## 2\. Explicação do Código e Conceitos de POO
+
+- **Abstração (`Veiculo.ts`):** A classe `Veiculo` é `abstract`, definindo um modelo comum para todos os veículos, com atributos (modelo, ano) e métodos (`ligar`, `desligar`) que toda especialização deve ter. O método `obterDescricao()` é abstrato, forçando as classes filhas a implementá-lo.
+
+- **Herança (`Carro.ts`, `Caminhao.ts`):** As classes `Carro` e `Caminhao` herdam de `Veiculo`, reutilizando seus atributos e métodos. Elas também adicionam características próprias (`numeroPortas` para Carro, `capacidadeCarga` para Caminhão).
+
+- **Encapsulamento (`Motorista.ts`, `Veiculo.ts`):** Os atributos das classes são definidos como `private` ou `protected`. O acesso a eles é controlado por meio de métodos `getters` e `setters`. Por exemplo, em `Motorista`, o `cpf` e a `cnh` são `readonly` e só podem ser lidos, garantindo que não sejam alterados após a criação.
+
+- **Polimorfismo (`GerenciadorFrota.ts`):** O método `listarVeiculos()` percorre uma lista de `Veiculo`. Para cada item, ele chama `veiculo.obterDescricao()`. O sistema executa a versão correta desse método (a da classe `Carro` ou a da classe `Caminhao`) em tempo de execução, demonstrando o polimorfismo.
+---
+
+## 3\. O que pode ser aprendido?
+
+Este projeto é um excelente ponto de partida para entender na prática:
+
+- Como estruturar um projeto em TypeScript.
+- A implementação dos pilares da POO em um cenário real.
+- O uso de classes, herança, métodos abstratos e controle de acesso.
+- A configuração básica de um ambiente de desenvolvimento com `npm` e `tsconfig.json`.
+
+---
+
+## 4\. Estrutura do Projeto
 
 O código-fonte é organizado de forma modular para separar as responsabilidades:
 
@@ -25,6 +47,7 @@ O código-fonte é organizado de forma modular para separar as responsabilidades
 *   `.gitignore`: Arquivo para ignorar arquivos e pastas (ex: `node_modules`).
 *   `package.json`: Definições do projeto e dependências.
 *   `tsconfig.json`: Configurações do compilador TypeScript.
+*   `docs/`: Contém a documentação do projeto gerada com o TypeDoc.
 *   `src/`
     *   `models/`
         *   `Veiculo.ts`: Classe base abstrata para todos os veículos.
@@ -35,20 +58,7 @@ O código-fonte é organizado de forma modular para separar as responsabilidades
         *   `GerenciadorFrota.ts`: Classe que centraliza a lógica do sistema.
 
 ---
-
-## 3\. Explicação do Código e Conceitos de POO
-
-- **Abstração (`Veiculo.ts`):** A classe `Veiculo` é `abstract`, definindo um modelo comum para todos os veículos, com atributos (modelo, ano) e métodos (`ligar`, `desligar`) que toda especialização deve ter. O método `obterDescricao()` é abstrato, forçando as classes filhas a implementá-lo.
-
-- **Herança (`Carro.ts`, `Caminhao.ts`):** As classes `Carro` e `Caminhao` herdam de `Veiculo`, reutilizando seus atributos e métodos. Elas também adicionam características próprias (`numeroPortas` para Carro, `capacidadeCarga` para Caminhão).
-
-- **Encapsulamento (`Motorista.ts`, `Veiculo.ts`):** Os atributos das classes são definidos como `private` ou `protected`. O acesso a eles é controlado por meio de métodos `getters` e `setters`. Por exemplo, em `Motorista`, o `cpf` e a `cnh` são `readonly` e só podem ser lidos, garantindo que não sejam alterados após a criação.
-
-- **Polimorfismo (`GerenciadorFrota.ts`):** O método `listarVeiculos()` percorre uma lista de `Veiculo`. Para cada item, ele chama `veiculo.obterDescricao()`. O sistema executa a versão correta desse método (a da classe `Carro` ou a da classe `Caminhao`) em tempo de execução, demonstrando o polimorfismo.
-
----
-
-## 4\. Como Instalar e Executar
+## 5\. Como Instalar e Executar
 
 Para configurar e executar este projeto, siga os passos abaixo:
 
@@ -118,15 +128,23 @@ Certifique-se de ter os seguintes pré-requisitos instalados em seu sistema:
         ```
 
         Este comando iniciará o aplicativo uma vez.
-
 ---
 
-## 5\. O que pode ser aprendido?
+## 6\. Documentação
 
-Este projeto é um excelente ponto de partida para entender na prática:
+A documentação completa do código-fonte foi gerada automaticamente a partir dos comentários JSDoc usando a ferramenta **TypeDoc**.
 
-- Como estruturar um projeto em TypeScript.
-- A implementação dos pilares da POO em um cenário real.
-- O uso de classes, herança, métodos abstratos e controle de acesso.
-- A configuração básica de um ambiente de desenvolvimento com `npm` e `tsconfig.json`.
+### Acessando a Documentação
 
+Para visualizar a documentação, abra o seguinte arquivo em seu navegador:
+
+- **[Clique aqui para ver a documentação](./docs/index.html)**
+
+### Gerando a Documentação Manualmente
+
+Caso queira gerar a documentação novamente, execute o seguinte comando na raiz do projeto:
+
+```bash
+bun run docs
+```
+---

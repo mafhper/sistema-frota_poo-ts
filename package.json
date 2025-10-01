@@ -8,7 +8,7 @@
     "start": "bun run app.ts",
     "dev": "bun --watch app.ts",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "typedoc --entryPointStrategy expand ./src --out docs"
+    "docs": "typedoc --entryPointStrategy expand ./src app.ts --out docs"
   },
   "keywords": [
     "typescript",

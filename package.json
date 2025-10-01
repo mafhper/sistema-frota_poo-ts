@@ -7,7 +7,8 @@
   "scripts": {
     "start": "bun run app.ts",
     "dev": "bun --watch app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "typedoc --entryPointStrategy expand ./src --out docs"
   },
   "keywords": [
     "typescript",
@@ -18,6 +19,7 @@
   "author": "Matheus Pereira",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^5.9.2"
+    "typescript": "~5.4.0",
+    "typedoc": "^0.25.13"
   }
 }

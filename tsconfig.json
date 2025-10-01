@@ -36,7 +36,6 @@
     "jsx": "react-jsx", // Suporte JSX para React.
 
     "isolatedModules": true, // Garante que cada arquivo possa ser compilado de forma independente.
-    "noUncheckedSideEffectImports": true, // Emite um erro para importações que podem ter efeitos colaterais não verificados.
     "moduleDetection": "force", // Força o TypeScript a tratar todos os arquivos como módulos.
     "skipLibCheck": true // Pula a verificação de tipo de todos os arquivos de declaração (.d.ts).
   }

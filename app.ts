@@ -1,16 +1,13 @@
-/**
- * @file app.ts
- * @author Matheus pereira
- *
- * @brief Ponto de entrada da aplicação. Este arquivo é responsável por
- * instanciar as classes, criar objetos e simular o funcionamento do
- * sistema de gerenciamento de frota.
- */
+// app.ts
+// Autor: Matheus Pereira
+// Ponto de entrada da aplicação. Este arquivo é responsável por
+// instanciar as classes, criar objetos e simular o funcionamento do
+// sistema de gerenciamento de frota.
 
-import Carro from "./src/models/Carro";
-import Caminhao from "./src/models/Caminhao";
-import Motorista from "./src/models/Motorista";
-import GerenciadorFrota from "./src/services/GerenciadorFrota";
+import Carro from "./models/Carro";
+import Caminhao from "./models/Caminhao";
+import Motorista from "./models/Motorista";
+import GerenciadorFrota from "./services/GerenciadorFrota";
 
 // 1. Instanciando o gerenciador da frota
 console.log("--- Iniciando Sistema de Frota ---");

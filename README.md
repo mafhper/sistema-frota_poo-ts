@@ -35,7 +35,7 @@ Este projeto é um excelente ponto de partida para entender na prática:
 - Como estruturar um projeto em TypeScript.
 - A implementação dos pilares da POO em um cenário real.
 - O uso de classes, herança, métodos abstratos e controle de acesso.
-- A configuração básica de um ambiente de desenvolvimento com `npm` e `tsconfig.json`.
+- A configuração básica de um ambiente de desenvolvimento com `bun` e `tsconfig.json`.
 
 ---
 

@@ -47,7 +47,6 @@ O código-fonte é organizado de forma modular para separar as responsabilidades
 *   `.gitignore`: Arquivo para ignorar arquivos e pastas (ex: `node_modules`).
 *   `package.json`: Definições do projeto e dependências.
 *   `tsconfig.json`: Configurações do compilador TypeScript.
-*   `docs/`: Contém a documentação do projeto gerada com o TypeDoc.
 *   `src/`
     *   `models/`
         *   `Veiculo.ts`: Classe base abstrata para todos os veículos.
@@ -128,23 +127,4 @@ Certifique-se de ter os seguintes pré-requisitos instalados em seu sistema:
         ```
 
         Este comando iniciará o aplicativo uma vez.
----
-
-## 6\. Documentação
-
-A documentação completa do código-fonte foi gerada automaticamente a partir dos comentários JSDoc usando a ferramenta **TypeDoc**.
-
-### Acessando a Documentação
-
-Para visualizar a documentação, abra o seguinte arquivo em seu navegador:
-
-- **[Clique aqui para ver a documentação](./docs/index.html)**
-
-### Gerando a Documentação Manualmente
-
-Caso queira gerar a documentação novamente, execute o seguinte comando na raiz do projeto:
-
-```bash
-bun run docs
-```
 ---

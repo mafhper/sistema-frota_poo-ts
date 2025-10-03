@@ -1,6 +1,6 @@
 {
   "name": "sistema-frota",
-  "version": "1.1",
+  "version": "1.2",
   "description": "Um sistema de gerenciamento de frota implementando conceitos de POO com TypeScript e Bun.",
   "main": "app.ts",
   "type": "module",
